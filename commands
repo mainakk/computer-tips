@@ -1,0 +1,100 @@
+Download all links in links.txt
+wget -i links.txt
+
+Download www.domain.com
+wget --recursive  --page-requisites --convert-links www.domain.com
+wget -r -p -k www.domain.com
+
+Limit download rate:
+wget --limit-rate 20K http://releases.ubuntu.com/precise/ubuntu-12.04.1-desktop-i386.iso
+
+When difficulty in removing a package
+/var/lib/dpkg/info
+
+Convert .flac to .mp3
+for file in *.flac; do flac -cd "$file" | lame -h - "${file%.flac}.mp3"; done
+
+Format pen-drive
+umount /dev/sdb
+mkfs.vfat -n ‘Mainak’ -I /dev/sdb
+
+Reinstall installed packages:
+dpkg --get-selections > package.list
+dpkg --set-selections < package.list
+
+Redirect terminal output to file AND terminal
+{command} | tee file
+
+Signature Verification Failure
+apt-get clean
+cd /var/lib/apt
+mv lists lists.old
+mkdir -p lists/partial
+apt-get clean
+apt-get update
+
+Mount an ISO image
+mount -o loop disk1.iso /mnt/disk
+
+Merge pdfs
+pdftk *.pdf cat output newfile.pdf
+
+Connect to ssh
+nc -zvw 1 <host_here> <port_here>
+ssh -Y -p 22 mainak@10.66.28.29
+
+Listing of files any of whose Internet address matches the address specified in  i
+lsof -i
+
+Remote lock screen
+ssh -X user@server "export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l;"
+
+Remote unlock screen
+ssh -X user@server "export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d;"
+
+Download a youtube channel
+yt-chanrip() { for count in 1 51 101 151 201 251 301; do for i in $(curl -s http://gdata.youtube.com/feeds/api/users/"$1"/uploads\?start-index="$count"\&max-results=50 | grep -Eo "watch\?v=[^[:space:]\"\'\\]{11}" | uniq); do youtube-dl --title --no-overwrites http://youtube.com/"$i"; done; done }
+yt-chanrip GameShowNetwork
+
+List all directories
+ls -lad */
+
+Copying file to host
+scp SourceFile user@host:directory/TargetFile
+scp thisfile mainak@10.66.25.13:/home/mainak
+
+Copying file from host
+scp user@host:directory/SourceFile TargetFile
+scp -r user@host:directory/SourceFolder TargetFolder
+
+Synchronize 2 folders
+rsync -avz appendix appendixNew
+
+Install touchpad drivers
+sudo su
+echo options psmouse proto=exps > /etc/modprobe.d/psmouse.modprobe
+reboot
+
+Connect to Airtel 4G LTE dongle
+curl --data "goformId=CONNECT_NETWORK" 192.168.0.1/goform/goform_set_cmd_process
+
+Install NVIDIA drivers (http://www.nvidia.com/Download/index.aspx)
+sudo add-apt-repository ppa:xorg-edgers/ppa -y
+sudo apt-get update
+sudo apt-get install nvidia-340
+lspci -vnn | grep -i VGA -A 12
+glxinfo | grep OpenGL | grep renderer
+
+Configure NVIDIA settings
+nvidia-settings
+
+Query system properties
+cat /proc/cpuinfo - cpu info
+cat /proc/meminfo - memory info
+df -h - disk usage
+free -m - ram usage
+iwconfig - wireless network configuration
+lsb_release -a - ubuntu release
+uname -a - kernel info
+sudo lshw - all hardwares
+aplay -l - all soundcards
