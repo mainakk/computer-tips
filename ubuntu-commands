@@ -52,10 +52,6 @@ ssh -X user@server "export DISPLAY=:0; gnome-screensaver; gnome-screensaver-comm
 Remote unlock screen
 ssh -X user@server "export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d;"
 
-Download a youtube channel
-yt-chanrip() { for count in 1 51 101 151 201 251 301; do for i in $(curl -s http://gdata.youtube.com/feeds/api/users/"$1"/uploads\?start-index="$count"\&max-results=50 | grep -Eo "watch\?v=[^[:space:]\"\'\\]{11}" | uniq); do youtube-dl --title --no-overwrites http://youtube.com/"$i"; done; done }
-yt-chanrip GameShowNetwork
-
 List all directories
 ls -lad */
 
@@ -98,3 +94,6 @@ lsb_release -a - ubuntu release
 uname -a - kernel info
 sudo lshw - all hardwares
 aplay -l - all soundcards
+
+Rip cd/dvd to iso
+dd if=/dev/cdrom of=image_name.iso
