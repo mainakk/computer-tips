@@ -97,3 +97,7 @@ aplay -l - all soundcards
 
 Rip cd/dvd to iso
 dd if=/dev/cdrom of=image_name.iso
+
+Set qBittorrent as default handler of magnet links
+xdg-mime query default x-scheme-handler/magnet
+xdg-mime default org.qbittorrent.qBittorrent.desktop x-scheme-handler/magnet
