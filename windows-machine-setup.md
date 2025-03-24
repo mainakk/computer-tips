@@ -20,6 +20,7 @@ Following are some guidelines for setting up a Windows machine for development. 
   cd new-project-name
   code .
   ```
+  VS Code will remember the recently opened directories, so you can quickly re-open the project directory from the File menu after launching VS Code from Start menu after opening the project directory for the first time.
 
 - Install [**Git**](https://git-scm.com/). Install it with the default settings. The git commands will be available in the Windows command prompt. You should set up your name and email address in git by running the following commands:
   ```shell
@@ -46,7 +47,7 @@ Following are some guidelines for setting up a Windows machine for development. 
 
 - Be familiar with Windows package managers like [**winget**](https://learn.microsoft.com/en-us/windows/package-manager/winget/) or [**scoop**](https://scoop.sh/) and install them when required. Some Windows software doesn't come with an installer, and you have to manually download and extract them and set up the system PATH environment. If those software are available in the package manager, you can install them with a single command. For example, Maven for Java is available in scoop.
 
-- Recommended approach for storing **notes**: You can create a "Notes" directory at a cloud backup path (like OneDrive, Google Drive etc.) and store your notes in markdown format. You can open the "Notes" directory in VS Code and edit the notes from there. Note that, VS Code remembers recently opened directories, so you can quickly open the "Notes" directory from the File menu after launching VS Code from Start menu. As your notes are stored within a cloud backup path, they will be automatically backed up to cloud and you can access them from any device. Later, you can use [Obsidian](https://obsidian.md/) + [Syncthing](https://syncthing.net/), if you want to have a better viewing/editing experience from mobile devices. Obsidian stores notes in markdown format within a directory, so you'll just need to point Obsidian to the "Notes" directory.
+- Recommended approach for storing **notes**: You can create a "Notes" directory at a cloud backup path (like OneDrive, Google Drive etc.) and store your notes in markdown format. You can open the "Notes" directory in VS Code and edit the notes from there. As your notes are stored within a cloud backup path, they will be automatically backed up to cloud and you can access them from any device. Later, you can use [Obsidian](https://obsidian.md/) + [Syncthing](https://syncthing.net/), if you want to have a better viewing/editing experience from mobile devices. Obsidian stores notes in markdown format within a directory, so you'll just need to point Obsidian to the "Notes" directory.
 
 - Be familiar with the **split-screen** feature in Windows. To use the split screen feature in Windows, you can press the `Windows` key and the `left arrow` or `right arrow` key to snap a window to one side of the screen. Then, select another window to fill the other half of the screen. This feature is useful when you are following a tutorial in a browser and writing code in VS Code. You can snap the browser window to one side of the screen and VS Code to the other side.
 
