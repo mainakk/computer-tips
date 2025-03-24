@@ -1,4 +1,7 @@
+# Useful Blogs and Newsletters for Software Engineers
+
 Following are some useful blogs and newsletters to keep up to date with the latest in software engineering. You can use [Feedly](https://feedly.com/) to subscribe to these blogs. Newsletters are sent to your email address at a set frequency.
+
 - [Programmer Weekly](https://www.programmerweekly.com/) (newsletter)
 - [Python Weekly](https://www.pythonweekly.com/) (newsletter)
 - [Hacker News Digest](https://hndigest.com/) (newsletter, set frequency to weekly)

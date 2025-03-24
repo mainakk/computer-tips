@@ -1,4 +1,4 @@
-## Windows Machine Setup for Development
+# Windows Machine Setup for Development
 
 Following are some guidelines for setting up a Windows machine for development. You can learn more about individual software listed below by visiting their respective websites.
 
@@ -7,26 +7,32 @@ Following are some guidelines for setting up a Windows machine for development. 
 - Install [**VS Code**](https://code.visualstudio.com/). You also need to install the extensions for the programming languages (for example, Python, Java) you are going to work with. By default, dark theme is enabled within VS Code. You can change it to light theme from VS Code settings.
 
   If you have a directory containing source code, it's recommended that you launch VS Code from inside the directory by running the following command in the Windows command prompt:
+
   ```shell
   cd path/to/source/code
   code .
   ```
+
   If you launch VS Code in the aforementioned manner, it will open the directory in the file explorer on the left side of the window. Also, you can start a command prompt within VS Code from the menu `Terminal -> New Terminal`. The command prompt will have the current directory set to the directory containing the source code. By default, the command prompt is set to Windows powershell, you should change it to Windows command prompt from VS Code settings.
 
   If you are starting a new project, the recommended way is to create a new directory for the project and then launch VS Code from inside that directory.
+
   ```shell
   cd path/to/projects
   mkdir new-project-name
   cd new-project-name
   code .
   ```
+
   VS Code will remember the recently opened directories, so you can quickly re-open the project directory from the File menu after launching VS Code from Start menu after opening the project directory for the first time.
 
 - Install [**Git**](https://git-scm.com/). Install it with the default settings. The git commands will be available in the Windows command prompt. You should set up your name and email address in git by running the following commands:
+
   ```shell
   git config --global user.name "Your Name"
   git config --global user.email "Your Email"
   ```
+
   `gitk` is nice GUI tool for viewing the git history and file changes. You can run it from the command prompt.
 
   Later on, you should install a GUI tool like [KDiff3](https://kdiff3.sourceforge.net/) to fix merge conflicts in git. You'll need to configure git to use KDiff3 as the merge tool.
